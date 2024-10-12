@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.register {
+
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+
+    .register-box {
+        
+        height: 100%;
+        width: 90%;
+        margin: auto;
+
+        header {
+            width: 100%;
+            
+            .logo {
+                width: 100%;
+                height: 11vh;
+
+                .nike-logo {
+                    height: 20px;
+                }
+                .jordan-logo {
+                    height: 40px;
+                }
+                img {
+                    
+                }
+            }
+            h1{
+                
+            }
+        }
+
+        .form {
+
+    
+            input {
+                width: 100%;
+                border: 1px black solid;
+                padding: 1rem 10px;
+                border-radius: 10px;
+            }
+            input:focus {
+                outline: none;
+            }
+
+            div {
+
+                button {
+                    color: white;
+                    background: black;
+                    padding: 10px 2px;
+                    border-radius: 25px;
+                    width: 120px;
+                }
+
+                button:hover {
+                    background: #5d5d5f;
+                    transition: 0.3s;
+                }
+            }
+ 
+        }
+
+    }
+}
+
