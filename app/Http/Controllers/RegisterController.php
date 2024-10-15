@@ -27,7 +27,7 @@ class RegisterController extends Controller
         $request->session()->put('verification_code', $verificationCode);
         $request->session()->put('email', $request->email);
         
-        // ส่งอีเมลด้วย VerificationCodeMail
+        
         Mail::to($request->email)->send(new VerificationCodeMail($verificationCode));
     
         return redirect()->route('registers.step2');

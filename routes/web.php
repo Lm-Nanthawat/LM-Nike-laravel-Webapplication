@@ -11,10 +11,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/email', function () {
-    return view('emails.verification_code');
-});
-
 Auth::routes();
 
 Route::get('/register/step1', [RegisterController::class, 'showStep1'])->name('registers.step1');
@@ -41,3 +37,11 @@ Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestF
 Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
 Route::get('password/reset/{token}', [ResetPasswordController::class, 'showResetForm'])->name('password.reset');
 Route::post('password/reset', [ResetPasswordController::class, 'reset'])->name('password.update');
+
+Route::get('/Men', function () {
+    return view('pages.men');
+});
+
+Route::get('/Women', function () {
+    return view('pages.women');
+});

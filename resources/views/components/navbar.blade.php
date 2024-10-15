@@ -12,12 +12,12 @@
                     <li>Help</li>
                     <div></div>
                     @if(Auth::check())
-                        <!-- Show user's name when logged in -->
+                        
                         <li>Welcome, {{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</li>
                         <div></div>
                         <li><a href="{{ route('logout') }}">Logout</a></li>
                     @else
-                        <!-- Show Join and Sign In buttons if not logged in -->
+                      
                         <li><a href="{{ url('/login/step1') }}">Join US</a></li>
                         <div></div>
                         <li><a href="{{ url('/register/step1') }}">Sign In</a></li>
@@ -28,21 +28,22 @@
     </div>
         <div class="navbar-box">
             <div class="flex justify-between items-center navbar">
-                <div class="main-logo">
+                <div class="w-[16%] flex main-logo">
                     <a href="/"><img src='https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg' alt="nike-logo"></img></a>
                 </div>
-                <div class="menu-list">
+                <div class="flex lg:flex menu-list">
                     <ul class="hidden md:flex text-md font-[500] space-x-6">
                         <li>New</li>
-                        <li>Men</li>
+                        <a href="/Men"><li>Men</li></a>
                         <li>Women</li>
                         <li>Kids</li>
                         <li>Jordan</li>
                         <li>Sale</li>
                     </ul>
                 </div>
-                <div class="flex menu-icons">
-                    <a href="" class="flex lg:flex"><x-bi-search /></a>
+                <div class="flex text-end menu-icons">
+                    <input type="text" placeholder="Search" class="w-[170px] hidden lg:flex rounded-full bg-[#f5f5f5] border-none hover:bg-[#e5e5e5] transition focus:ring-0 focus:border-black"></input>
+                    <a href="" class="flex lg:hidden"><x-bi-search /></a>
                     <a href="" class="lg:hidden"><x-feathericon-user /></a>
                     <a href="" class="hidden md:flex"><x-far-heart /></a>
                     <a href="/cart"><x-bi-bag /></a>
