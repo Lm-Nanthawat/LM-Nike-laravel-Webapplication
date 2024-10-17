@@ -42,6 +42,11 @@ Route::get('/Men', function () {
     return view('pages.men');
 });
 
+Route::get('/Men/Shoes', function () {
+    return view('pages.subpages.men_shoes');
+});
+
+
 Route::get('/Women', function () {
     return view('pages.women');
 });
