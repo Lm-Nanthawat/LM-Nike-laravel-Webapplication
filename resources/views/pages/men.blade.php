@@ -20,7 +20,7 @@
             </div>
             
             <div class="pt-4 flex lg:pt-0 list-none space-x-8">
-            <a href="" class="hover:text-[#c5c5c7] transition"><li>Shoes</li></a>
+            <a href="{{ route('showMen.Shoes') }}" class="hover:text-[#c5c5c7] transition"><li>Shoes</li></a>
             <a href="" class="hover:text-[#c5c5c7] transition"><li>Clothing</li></a>
             <a href="" class="hover:text-[#c5c5c7] transition"><li>Accessories</li></a>
             <a href="" class="hover:text-[#c5c5c7] transition"><li>Sales</li></a>

@@ -6,6 +6,10 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\ResetPasswordController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminShoesController;
+use App\Http\Controllers\MenshoesController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -42,11 +46,17 @@ Route::get('/Men', function () {
     return view('pages.men');
 });
 
-Route::get('/Men/Shoes', function () {
-    return view('pages.subpages.men_shoes');
-});
 
 
 Route::get('/Women', function () {
     return view('pages.women');
 });
+
+Route::get('/Men/Shoes', [MenshoesController::class, 'showMenShoes'])->name('showMen.Shoes');
+Route::get('/api/men/shoes', [MenshoesController::class, 'getMenShoes'])->name('api.menShoes');
+
+
+Route::get('/dashboard', [AdminController::class, 'showDashboard'])->name('dashboard')->middleware('admin');
+
+Route::get('/dashboard/Shoes', [AdminShoesController::class, 'showAdminShoes'])->name('adminShoes')->middleware('admin');
+Route::post('/dashboard/Shoes', [AdminShoesController::class, 'postAdminShoes'])->name('admin.shoes.post')->middleware('admin');

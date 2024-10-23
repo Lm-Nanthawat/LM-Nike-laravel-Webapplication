@@ -14,7 +14,7 @@
                     @if(Auth::check())
                         
                         <li class="hover:text-[#5d5d5f] cursor-pointer transition-all duration-300">Welcome, {{ Auth::user()->firstname }} {{ Auth::user()->lastname }}</li>
-                        <div ></div>
+                        <div class="h-[12px] m-[12px] border-r-[1px] border-[black]"></div>
                         <li class="hover:text-[#5d5d5f] cursor-pointer transition-all duration-300"><a href="{{ route('logout') }}">Logout</a></li>
                     @else
                       
